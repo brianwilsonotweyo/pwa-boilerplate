@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
   <meta name="description" content=""/>
   <meta name="author" content=""/>
-  <title>Dashtreme Admin - Free Dashboard for Bootstrap 4 by Codervent</title>
+  <title>BIKO Admin -  Dashboard</title>
   <!-- loader-->
   <link rel="manifest" href="functions/manifest.json">
     <link rel="stylesheet" href="styles/index.min.css">
@@ -48,7 +48,7 @@
      <div class="brand-logo">
       <a href="index.html">
        <img src="./assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
-       <h5 class="logo-text">Dashtreme Admin</h5>
+       <h5 class="logo-text">BIKO Admin</h5>
      </a>
    </div>
    <ul class="sidebar-menu do-nicescrol">
@@ -154,51 +154,76 @@
     <div class="container-fluid">
      
       
-      <div class="row">
+      <div class="table-responsive">
+        <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Contact</th>
+            <th scope="col">Validation</th>
+            <th scope="col">Company Name</th>
+            <th scope="col">Company C.O.I</th>
+            <th scope="col">T.I.N</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          
+        </tbody>
+      </table>
+      </div>
+      <!-- <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table> -->
+      <!-- <div class="row">
         <div class="col-lg-6">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Mechanics Table</h5>
 			  <div class="table-responsive">
-               <table class="table table-striped">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">First Name</th>
-                      <th scope="col">Last Name</th>
-                      <th scope="col">Contact</th>
-                      <th scope="col">Validation</th>
-                      <th scope="col">Company Name</th>
-                      <th scope="col">Company C.O.I</th>
-                      <th scope="col">T.I.N</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                  </tbody>
-                </table>
+             
             </div>
             </div>
           </div>
         </div>
-      </div><!--End Row-->
+      </div> -->
+      <!--End Row
 
 	  <!--start overlay-->
 		  <div class="overlay toggle-menu"></div>
@@ -216,7 +241,7 @@
 	<footer class="footer">
       <div class="container">
         <div class="text-center">
-          Copyright © 2018 Dashtreme Admin
+          Copyright © 2018 BIKO Admin
         </div>
       </div>
     </footer>
@@ -283,6 +308,49 @@
 
 <!-- service worker -->
 <script src="service-worker.js ">
-	
+</script>
+<script>
+  var array =[
+  {
+    "tag":"001",
+    "FirstName":"Emma",
+    "LastName":"Yusufu",
+    "Contact":"0788577236",
+    "Validation":"1",
+    "CompanyName":"Yusufu and son garage",
+    "CompanyCOI":"1234",
+    "TIN":"2347"
+  },
+  { 
+    "tag":"002",
+    "FirstName":"Bostana",
+    "LastName":"Micheal",
+    "Contact":"0734763678",
+    "Validation":"0",
+    "CompanyName":"bostana inc",
+    "CompanyCOI":"456i54u3",
+    "TIN":"45432"
+  }
+  ]
+  buildTable(array)
+  function buildTable(data){
+    var table = document.getElementById("table-body")
+    for(var i =0; i<data.length; i++){
+      var row=`
+      <tr>
+        <td>${data[i].tag}</td>
+        <td>${data[i].FirstName}</td>
+        <td>${data[i].LastName}</td>
+        <td>${data[i].Contact}</td>
+        <td>${data[i].Validation}</td>
+        <td>${data[i].CompanyName}</td>
+        <td>${data[i].CompanyCOI}</td>
+        <td>${data[i].TIN}</td>
+      </tr>
+      `
+      table.innerHTML +=row
+    }
+  }
+</script>
 </body>
 </html>

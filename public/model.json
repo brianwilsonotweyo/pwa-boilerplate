@@ -1,0 +1,20 @@
+{
+    "tag":"001",
+    "FirstName":"Emma",
+    "LastName":"Yusufu",
+    "Contact":"0788577236",
+    "Validation":"1",
+    "CompanyName":"Yusufu and son garage",
+    "CompanyCOI":"1234",
+    "TIN":"2347"
+  },
+  { 
+    "tag":"002",
+    "FirstName":"Bostana",
+    "LastName":"Micheal",
+    "Contact":"0734763678",
+    "Validation":"0",
+    "CompanyName":"bostana inc",
+    "CompanyCOI":"456i54u3",
+    "TIN":"45432"
+  }

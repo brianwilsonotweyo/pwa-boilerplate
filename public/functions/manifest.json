@@ -1,6 +1,6 @@
 {
-  "name": "YourDuuka",
-  "short_name": "YourDuuka",
+  "name": "Biko Admin",
+  "short_name": "BIKO",
   "icons": [{
       "src": "../assets/android-icon-192x192.png",
       "sizes": "512x512",

@@ -2,7 +2,7 @@
   "name": "YourDuuka",
   "short_name": "YourDuuka",
   "icons": [{
-      "src": "../assets/app2.png",
+      "src": "../assets/android-icon-192x192.png",
       "sizes": "512x512",
       "type": "image/png"
     }],
